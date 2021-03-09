@@ -15,8 +15,8 @@ function App() {
     .then(response => response.json())
     .then(data => {
       setCountryInfo(data);
-    })
-  },[])
+    });
+  },[]);
 
   useEffect(() =>{
     const getCountriesData = async () =>{
