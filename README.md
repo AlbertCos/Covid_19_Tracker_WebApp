@@ -1,4 +1,4 @@
-# Clone_Slack
+# Covid_19_Tracker_WebAPP
 Covid_19_tracker is a Web-app, that shows in realtime, the situation with regards to the COVID-19.
 
 
