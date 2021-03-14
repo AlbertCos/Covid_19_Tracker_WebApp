@@ -27,15 +27,15 @@ The users can see directly in the map, by click in each country the total people
 
 ## Installation
 For this webapp we used the following:  
-    * "chart.js": "^2.9.4".
-    * "leaflet": "^1.7.1".
-    * "numeral": "^2.0.6".
-    * "react": "^17.0.1".
-    * "react-chartjs-2": "^2.11.1".
-    * "react-dom": "^17.0.1".
-    * "react-leaflet": "^3.1.0".
-    * "react-scripts": "4.0.3".
-    * "web-vitals": "^1.1.0".
+- **chart.js**: "^2.9.4".
+- **leaflet**: "^1.7.1".
+- **numeral**: "^2.0.6".
+- **react**: "^17.0.1".
+- **react-chartjs-2**: "^2.11.1".
+- **react-dom**: "^17.0.1".
+- **react-leaflet**: "^3.1.0".
+- **react-scripts**: "4.0.3".
+- **web-vitals:** "^1.1.0".
 
 
 
