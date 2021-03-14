@@ -2,51 +2,48 @@ import React from "react";
 import numeral from "numeral";
 import { Circle, Popup } from "react-leaflet";
 
-
 const casesTypeColors = {
-    cases: {
-        hex: "#CC1034",
-        mulitiplier: 800,
-    },
-  
-    recovered: {
-        hex: "#7DD71D",
-        mulitiplier: 1200,
-    },
-  
-    deaths: {
-        hex: "#fb4443",
-        mulitiplier: 2000,
-    },
-  };
+  cases: {
+    hex: "#CC1034",
+ 
+    mulitiplier: 800,
+  },
 
-export const sortData= (data) =>{
-    const sortedData = [...data];
+  recovered: {
+    hex: "#7DD71D",
+ 
+    mulitiplier: 1200,
+  },
 
-    sortedData.sort((a,b)=>{
-        if (a.cases > b.cases) {
-            return -1;
+  deaths: {
+    hex: "#fb4443",
+ 
+    mulitiplier: 2000,
+  },
+};
 
-        } else{
-            return 1;
-        }
-    })
-    return sortedData;
-}
+export const sortData = (data) => {
+  const sortedData = [...data];
+
+  sortedData.sort((a, b) => b.cases - a.cases);
+
+  return sortedData;
+};
 
 export const prettyPrintStat = (stat) =>
   stat ? `+${numeral(stat).format("0.0a")}` : "+0";
-
 
 export const showDataOnMap = (data, casesType) =>
   data.map((country) => (
     <Circle
       center={[country.countryInfo.lat, country.countryInfo.long]}
       fillOpacity={0.4}
-      color = {casesTypeColors[casesType].hex}
-      fillColor = {casesTypeColors[casesType].hex}
+      pathOptions={{
+        color: casesTypeColors[casesType].hex,
+        fillColor: casesTypeColors[casesType].hex,
+      }}
       radius={
-        Math.sqrt(country[casesType]/10) *
+        Math.sqrt(country[casesType] / 10) *
         casesTypeColors[casesType].mulitiplier
       }
     >
